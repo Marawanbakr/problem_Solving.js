@@ -1,16 +1,21 @@
 function getPreviousNumbers(num) {
-  let messenge = 'Negative Numbers & Zero Not Allowed';
-  if (num > 10) {
-    console.log(num);
-    for (i = 16; i >= 2; i = i - 2) {
-      console.log(i);
-    }
-  } else if (num <= 0) {
-    console.log(messenge);
-  } else if (num == 10) {
-    for (i = 10; i >= 2; i--) {
-      console.log(i);
-    }
+  let result = [];
+  switch (true) {
+    case num <= 0:
+      console.log('Negative Numbers & Zero Not Allowed');
+      break;
+    case num <= 10:
+      for (i = 1; i <= num; i++) {
+        console.log(parseInt([i].reverse().toString()));
+      }
+      break;
+    case num > 10:
+      for (i = 0; i <= num; i = i + 2) {
+        if (i !== 0) {
+          console.log(parseInt([i]));
+        }
+      }
+      console.log(num);
   }
 }
 getPreviousNumbers(0); // "Negative Numbers & Zero Not Allowed"
